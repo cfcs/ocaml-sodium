@@ -20,7 +20,7 @@ open Ctypes
 
 module Type = Sodium_types.C(Sodium_types_detected)
 
-module C(F: Cstubs.FOREIGN) = struct
+module C(F: Ctypes.FOREIGN) = struct
   let prefix = "sodium"
 
   let init    = F.(foreign (prefix^"_init")    (void @-> returning int))

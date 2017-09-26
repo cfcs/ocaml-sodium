@@ -5,7 +5,7 @@ module BindStorage(T: functor(S: Sodium_storage.S) -> sig end) = struct
   module Bigbytes = T(Sodium_storage.Bigbytes)
 end
 
-module Bind(F: Cstubs.FOREIGN) = struct
+module Bind(F: Ctypes.FOREIGN) = struct
   include Sodium_bindings.C(F)
   module Sodium' = BindStorage(Make)
   module Random' = BindStorage(Random.Make)

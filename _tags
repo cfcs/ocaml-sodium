@@ -1,3 +1,5 @@
 true: warn(@5@8@10@11@12@14@23@24@26@29), bin_annot, safe_string
 
 "lib": include
+"lib_gen": ctypes-foreign
+"lib_gen/sodium_bindings.ml": package(ctypes)
